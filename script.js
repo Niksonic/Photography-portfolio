@@ -44,22 +44,7 @@ function openLightbox(imageUrl) {
         }
     });
 }
-
-
-    document.body.appendChild(lightbox);
-
-    lightbox.querySelector('.close-lightbox').addEventListener('click', () => {
-        document.body.removeChild(lightbox);
-    });
-
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            document.body.removeChild(lightbox);
-        }
-    });
-
-
-document.addEventListener('keydown', (e) => {
+    document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
         const lightbox = document.querySelector('.lightbox');
         if (lightbox) {
